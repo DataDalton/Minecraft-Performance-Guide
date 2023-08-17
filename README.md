@@ -1,9 +1,8 @@
 ![Minecraft Performance Guide Logo - Small][Logo Full]
 
+---
 
-Minecraft Performance Guide
-======
-Currently, this main page serves as a directory for all of the specific guides
+### Currently, this main page serves as a directory for all of the specific guides
 
 <br>
 
