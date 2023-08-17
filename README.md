@@ -1,9 +1,17 @@
-![Minecraft Performance Guide Logo - Small][logo full]
+![Minecraft Performance Guide Logo - Small][Logo Full]
 
 
 Minecraft Performance Guide
 ======
-This is the detailed Minecraft Java Arguments guide and is a part of the overarching Minecraft Performance Guide
+Currently, this main page serves as a directory for all of the specific guides
 
-[logo small]: ./assets/Minecraft%20Performance%20Guide%20-%20Logo.png "Minecraft Performance Guide Logo - Small"
-[logo full]: ./assets/Minecraft%20Performance%20Guide%20-%20Full.png "Minecraft Performance Guide Logo - Full"
+<br>
+
+| **Directory** |
+|---|
+| [Java Arguments][Java Arguments] |
+
+[Logo Small]: ./assets/Minecraft%20Performance%20Guide%20-%20Logo.png "Minecraft Performance Guide Logo - Small"
+[Logo Full]: ./assets/Minecraft%20Performance%20Guide%20-%20Full.png "Minecraft Performance Guide Logo - Full"
+
+[Java Arguments]: ./Java%20Arguments/README.md
