@@ -608,7 +608,7 @@ If you do not know what Java version you are using, you are likely using a versi
 
 
 
-If you do know you are using a version of Java with ZGC, Shenandoah, or GraalVM support then you should check [ZGC](#zgc), [Shenandoah](#Shenandoah), or [GraalVM](#graalvm-(enterprise-edition))
+If you do know you are using a version of Java with ZGC, Shenandoah, or GraalVM support then you should check [ZGC](#zgc), [Shenandoah](#Shenandoah), or [GraalVM](#graalvm-enterprise-edition)
 
 
 > Note: See [Launchers](#launchers) and [Memory Allocation](#memory-allocation) for important information
