@@ -23,7 +23,7 @@ he3als
 
 I have overhauled the entire look of the guide and brought it to a much more up-to-date standpoint and plan on maintaining it for quite a while moving forward.
 
-I have also performed my own independent, extensive testing to ensure that accurate results and benchmarking has taken place.
+I have also performed my own independent, extensive testing to ensure that accurate results and benchmarking have taken place.
 
 <br>
 
