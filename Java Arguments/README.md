@@ -1,4 +1,4 @@
-![Minecraft Performance Guide Logo - Full][Logo Full]
+![Minecraft Performance Guide Banner][Banner]
 
 ###### This is the detailed Minecraft Java Arguments guide and is a part of the overarching Minecraft Performance Guide
 
@@ -621,5 +621,5 @@ If you do know you are using a version of Java with ZGC, Shenandoah, or GraalVM 
 
 <br>
 
-[Logo Small]: ../assets/Minecraft%20Performance%20Guide%20-%20Logo.png
-[Logo Full]: ../assets/Minecraft%20Performance%20Guide%20-%20Full.png
+[Logo]: ../assets/Minecraft%20Performance%20Guide%20-%20Logo.png
+[Banner]: ../assets/Minecraft%20Performance%20Guide%20-%20Banner.png

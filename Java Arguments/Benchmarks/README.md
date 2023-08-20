@@ -1,4 +1,4 @@
-![Minecraft Performance Guide Logo - Full][Logo Full]
+![Minecraft Performance Guide Banner][Banner]
 
 ###### This is a part of the detailed Minecraft Java Arguments guide which is a part of the overarching Minecraft Performance Guide
 
@@ -11,5 +11,5 @@ New benchmarking is in-progress
 
 <br>
 
-[Logo Small]: ../../assets/Minecraft%20Performance%20Guide%20-%20Logo.png "Minecraft Performance Guide Logo - Small"
-[Logo Full]: ../../assets/Minecraft%20Performance%20Guide%20-%20Full.png "Minecraft Performance Guide Logo - Full"
+[Logo]: ../../assets/Minecraft%20Performance%20Guide%20-%20Logo.png
+[Banner]: ../../assets/Minecraft%20Performance%20Guide%20-%20Banner.png

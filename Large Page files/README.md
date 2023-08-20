@@ -1,4 +1,4 @@
-![Minecraft Performance Guide Logo - Small][Logo Full]
+![Minecraft Performance Guide Banner][Banner]
 
 ###### This is the Large Page files guide and is a part of the overarching Minecraft Performance Guide
 
@@ -39,5 +39,5 @@ In any Java version/platform, if large pages isn't working, you will get a warni
 
 <br>
 
-[Logo Small]: ../assets/Minecraft%20Performance%20Guide%20-%20Logo.png
-[Logo Full]: ../assets/Minecraft%20Performance%20Guide%20-%20Full.png
+[Logo]: ../assets/Minecraft%20Performance%20Guide%20-%20Logo.png
+[Banner]: ../assets/Minecraft%20Performance%20Guide%20-%20Banner.png

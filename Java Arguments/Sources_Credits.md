@@ -1,4 +1,4 @@
-![Minecraft Performance Guide Logo - Full][Logo Full]
+![Minecraft Performance Guide Banner][Banner]
 
 ###### This is the Sources and Credits for the detailed Minecraft Java Arguments guide and is a part of the overarching Minecraft Performance Guide
 
@@ -47,5 +47,5 @@ These sources are the sources from the original repository which I felt like sho
 - https://docs.oracle.com/javase/8/embedded/develop-apps-platforms/codecache.htm
 
 
-[Logo Small]: ../assets/Minecraft%20Performance%20Guide%20-%20Logo.png
-[Logo Full]: ../assets/Minecraft%20Performance%20Guide%20-%20Full.png
+[Logo]: ../assets/Minecraft%20Performance%20Guide%20-%20Logo.png
+[Banner]: ../assets/Minecraft%20Performance%20Guide%20-%20Banner.png

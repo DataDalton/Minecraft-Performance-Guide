@@ -1,4 +1,4 @@
-![Minecraft Performance Guide Logo - Small][Logo Full]
+![Minecraft Performance Guide Banner][Banner]
 
 ---
 
@@ -14,8 +14,8 @@
 | [Launchers][Launchers] |
 | [Mods][Mods] |
 
-[Logo Small]: ./assets/Minecraft%20Performance%20Guide%20-%20Logo.png
-[Logo Full]: ./assets/Minecraft%20Performance%20Guide%20-%20Full.png
+[Logo]: ./assets/Minecraft%20Performance%20Guide%20-%20Logo.png
+[Banner]: ./assets/Minecraft%20Performance%20Guide%20-%20Banner.png
 
 [Java Arguments]: ./Java%20Arguments/README.md
 [Large Page Files]: ./Large%20Page%20Files/README.md

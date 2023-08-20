@@ -1,4 +1,4 @@
-![Minecraft Performance Guide Logo - Small][Logo Full]
+![Minecraft Performance Guide Banner][Banner]
 
 ###### This is the Contributions guide for the Github
 
@@ -11,5 +11,5 @@ TODO
 
 <br>
 
-[Logo Small]: ../assets/Minecraft%20Performance%20Guide%20-%20Logo.png
-[Logo Full]: ../assets/Minecraft%20Performance%20Guide%20-%20Full.png
+[Logo]: ../assets/Minecraft%20Performance%20Guide%20-%20Logo.png
+[Banner]: ../assets/Minecraft%20Performance%20Guide%20-%20Banner.png
