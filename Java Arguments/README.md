@@ -138,7 +138,7 @@ Keep a close eye on the Window's Task manager (or your DE's system monitor) as M
 
 *You should also only ever allocate >=32GB of ram when you are on a server. Once you enable 32GB of memory you disable [compressed OOPs](https://www.baeldung.com/jvm-compressed-oops) which will impact performance. It is possible to enable OOPs when using >=32GB, however, it will still negatively impact performance*
 
-*Many people are still under the belief that you should never use 6-8GB of memory, this is simply not true and has not been true for a very long time, most modded packs perform best when using 8-16GB of memory client-side*
+*Many people are still under the belief that you should only use 4-8GB of memory, this is not true and has not been true for a very long time. Most modded packs perform best when using 6-16GB of memory client-side. It is also possible, depending on the version and if there are mods, how many mods, that you need less or even more than this 6-16GB range. I highly recommend testing this yourself and seeing what performs best as there is a large amount of variables to consider.*
 
 > Note: I highly recommend hosting both vanilla and modded on a server. Hosting on a server will reduce client stress and will increase overall performance. If you are looking for a free option, Oracle offers a permanent always free-tier (which should not be confused with the free trial) you can find a good guide how to setup an Oracle server with this [Youtube video](https://www.youtube.com/watch?v=RyC-m725uTs)
 
