@@ -3,7 +3,7 @@
 ---
 
 ### Currently, this main page serves as a directory for all of the specific guides
-> But will soon be a directory with summary information from every guide
+> But will soon be a directory with summary information from every guide as well as will serve as a hub for connecting lots of other useful resources
 
 <br>
 
