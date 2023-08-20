@@ -1,6 +1,6 @@
 ![Minecraft Performance Guide Logo - Full][Logo Full]
 
-###### This is the sources for the detailed Minecraft Java Arguments guide and is a part of the overarching Minecraft Performance Guide
+###### This is the Sources and Credits for the detailed Minecraft Java Arguments guide and is a part of the overarching Minecraft Performance Guide
 
 <br>
 
@@ -47,13 +47,5 @@ These sources are the sources from the original repository which I felt like sho
 - https://docs.oracle.com/javase/8/embedded/develop-apps-platforms/codecache.htm
 
 
-[Logo Small]: ./assets/Minecraft%20Performance%20Guide%20-%20Logo.png "Minecraft Performance Guide Logo - Small"
-[Logo Full]: ./assets/Minecraft%20Performance%20Guide%20-%20Full.png "Minecraft Performance Guide Logo - Full"
-
-[Spark - Curseforge]: https://www.curseforge.com/minecraft/mc-mods/spark "test"
-[Spark - Modrinth]: https://modrinth.com/mod/spark?hl=en-US
-
-[Observable - Curseforge]: https://www.curseforge.com/minecraft/mc-mods/observable
-[Observable - Modrinth]: https://modrinth.com/mod/observable
-
-[LagGoggles - Curseforge]: https://www.curseforge.com/minecraft/mc-mods/laggoggles
+[Logo Small]: ../assets/Minecraft%20Performance%20Guide%20-%20Logo.png
+[Logo Full]: ../assets/Minecraft%20Performance%20Guide%20-%20Full.png
