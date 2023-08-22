@@ -1,9 +1,14 @@
 ![Minecraft Performance Guide Banner][Banner]
 
----
+###### Currently, this main page serves as a directory for all of the specific guides, but will eventually have a general summary of everything and will act as a hub for connecting lots of useful resources
 
-### Currently, this main page serves as a directory for all of the specific guides
-> But will soon be a directory with summary information from every guide as well as will serve as a hub for connecting lots of other useful resources
+<br>
+
+Minecraft Performance Guide
+======
+Experiencing crashes, having TPS, FPS, or memory issues, have questions, or just want to talk and showcase builds? Join our Discord!
+
+[![Discord](https://img.shields.io/discord/1142866287983349760.svg?color=%237289da&label=Discord&logo=discord&logoColor=%237289da)][Discord] 
 
 <br>
 
@@ -16,6 +21,8 @@
 
 [Logo]: ./assets/Minecraft%20Performance%20Guide%20-%20Logo.png
 [Banner]: ./assets/Minecraft%20Performance%20Guide%20-%20Banner.png
+
+[Discord]: https://discord.gg/nptv2TwaD5
 
 [Java Arguments]: ./Java%20Arguments/README.md
 [Large Page Files]: ./Large%20Page%20Files/README.md
