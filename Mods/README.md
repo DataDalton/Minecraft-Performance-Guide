@@ -1,4 +1,4 @@
-![Minecraft Performance Guide Banner][Banner]l]
+![Minecraft Performance Guide Banner][Banner]
 
 ###### This is the Mods guide and is a part of the overarching Minecraft Performance Guide
 
