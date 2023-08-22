@@ -531,7 +531,7 @@ Frequently Asked Questions
 
 - This guide assumes you have a decent amount of spare RAM when running Minecraft. If your setup is RAM constrained, try removing the following arguments in particular: `-XX:NmethodSweepActivity=1 -XX:ReservedCodeCacheSize=400M -XX:NonNMethodCodeHeapSize=12M -XX:ProfiledCodeHeapSize=194M -XX:NonProfiledCodeHeapSize=194M`, and try the server G1GC arguments.
 
-- IBM's OpenJ9 does save RAM, as its reputation would suggest, but is over 30% slower at server chunkgen in my tests. If there are any flags that make it competitive with OpenJDK, please open a discussion on Github or contact my [Discord]()
+- IBM's OpenJ9 does save RAM, as its reputation would suggest, but is over 30% slower at server chunkgen in my tests. If there are any flags that make it competitive with OpenJDK, please open a discussion on Github or contact my [Discord](https://discord.gg/nptv2TwaD5)
 
 - EXCEPTION_ACCESS_VIOLATION - This may be caused by a few different things
   - Ensure Minecraft is using your dedicated graphics card if you have one
