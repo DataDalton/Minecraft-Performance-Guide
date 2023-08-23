@@ -134,7 +134,7 @@ Allocating too much memory can break garbage collection or just slow Minecraft d
 
 Allocating too little can also slow down or break the game.
 
-Keep a close eye on the Window's Task manager (or your DE's system monitor) as Minecraft is running, and allocate only as much as it needs (which is usually less than 8GB but can be more for larger modpacks! As a client I recommend <16GB in most situations). [`/spark gcmonitor`](https://spark.lucko.me/docs/Command-Usage#spark-gcmonitor) will tell you if your allocation is too high (the pauses will be too long) or too low (frequent garbage collection with a low memory warning in the notification).
+Keep a close eye on the Window's Task manager (or your DE's system monitor) as Minecraft is running, and allocate only as much as it needs (which is usually less than 8GB but can be more for larger modpacks! As a client I recommend <16GB in most situations). [`/sparkc gcmonitor`](https://spark.lucko.me/docs/Command-Usage#spark-gcmonitor) will tell you if your allocation is too high (the pauses will be too long) or too low (frequent garbage collection with a low memory warning in the notification).
 
 *You should also only ever allocate >=32GB of ram when you are on a server. Once you enable 32GB of memory you disable [compressed OOPs](https://www.baeldung.com/jvm-compressed-oops) which will impact performance. It is possible to enable OOPs when using >=32GB, however, it will still negatively impact performance*
 
@@ -174,7 +174,7 @@ x86 Java 8 users (aka most Java 8 users) can add these additional arguments:
 Garbage Collection
 ======
 
-**Garbage collection flags must be added to Minecraft servers and clients**, as the default pauses/stutters to stop and collect garbage manifest on the client and lag on servers. Use the `/spark gcmonitor` command with the [Spark](https://www.curseforge.com/minecraft/mc-mods/spark) mod to observe stutters in-game. *Any* old generation pauses are bad, and young generation G1GC collections should be infrequent, but short enough to be not noticeable.
+**Garbage collection flags must be added to Minecraft servers and clients**, as the default pauses/stutters to stop and collect garbage manifest on the client and lag on servers. Use the `/sparkc gcmonitor` command with the [Spark](https://www.curseforge.com/minecraft/mc-mods/spark) mod to observe stutters in-game. *Any* old generation pauses are bad, and young generation G1GC collections should be infrequent, but short enough to be not noticeable.
 
 Pick one set of flags. ~~I recommend **Shenandoah on clients**, **ZGC on powerful Java 17 servers**, and **G1GC on Graal** or on servers/clients with less RAM and fewer cores:~~
 
