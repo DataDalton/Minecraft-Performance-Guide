@@ -18,6 +18,8 @@ Experiencing crashes, having TPS, FPS, or memory issues, have questions, or just
 | [Large Page Files][Large Page Files] |
 | [Launchers][Launchers] |
 | [Mods][Mods] |
+| [RAM][RAM] |
+| [Spark & Observable][Spark & Observable] |
 
 [Logo]: ./assets/Minecraft%20Performance%20Guide%20-%20Logo.png
 [Banner]: ./assets/Minecraft%20Performance%20Guide%20-%20Banner.png
