@@ -8,7 +8,7 @@ Minecraft Performance Guide
 ======
 Experiencing crashes, having TPS, FPS, or memory issues, have questions, or just want to talk and showcase builds? Join our Discord!
 
-[![Discord](https://img.shields.io/discord/1142866287983349760.svg?color=%237289da&label=Discord&logo=discord&logoColor=%237289da)][Discord] 
+[![Discord](https://img.shields.io/discord/1142866287983349760.svg?color=%237289da&label=Discord&logo=discord&logoColor=%237289da)][Discord]
 
 <br>
 
@@ -30,3 +30,5 @@ Experiencing crashes, having TPS, FPS, or memory issues, have questions, or just
 [Large Page Files]: ./Large%20Page%20Files/README.md
 [Launchers]: ./Launchers/README.md
 [Mods]: ./Mods/README.md
+[RAM]: ./RAM/README.md
+[Spark & Observable]: ./Spark%20&%20Observable/README.md
