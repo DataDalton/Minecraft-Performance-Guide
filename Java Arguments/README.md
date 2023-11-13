@@ -91,7 +91,7 @@ The most popular companies/people behind the different Runtimes are: Adoptium, A
 The most notable differences between these different Java Runtimes are as follows:
 
 
-- **Oracle GraalVM (EE)** - Comes with a more aggressive Java compiler - this is currently the most recommended JVE for performance
+- **Oracle GraalVM** - Comes with a more aggressive Java compiler and ZGC - This is currently the most recommended JVE for performance
 
 - **Intel's Clear Linux OpenJDK** - Uses the same code as many other OpenJDKs which makes it highly compatible, making it highly compatible. The build process itself and the dependencies are [optimized for newer CPUs](https://www.phoronix.com/review/zen4-clear-linux/2). You can get it from Clear Linux's repositories via `swupd`, from [Distrobox](https://github.com/89luca89/distrobox), or from [Docker](https://hub.docker.com/r/clearlinux/openjdk). It is important to note that in order to use this you must currently use the Java 17 release, and that Java 18 [reverts some of the performance enhancements](https://github.com/clearlinux-pkgs/openjdk/commit/14202e83f919643031cfb7a6318b067310be90f1).
 
@@ -320,58 +320,42 @@ No other "threading" flags like `ParallelGCThreads` or `JVMCIThreads` are necess
 
 <br>
 
-GraalVM (Enterprise Edition)
+GraalVM
 ======
 
-GraalVM is a new Java VM from Oracle that can improve the performance of (modded and vanilla) Minecraft. While client FPS gains are modest, server-side workloads like chunk generation can get a 20%+ boost.
-
-All new versions of GraalVM come with the full set of optimizations rather than previously it being limited to only the Enterprise Edition versions. ~~Only GraalVM Enterprise Edition comes with the full set of optimizations~~.
-
-Download it from these direct links from Oracle:
-
-*Most up-to-date Enterprise Edition downloads, no account needed*
-<details>
-  <summary>Java 17</summary>
-
-- Windows AMD64 (64-bit): https://oca.opensource.oracle.com/gds/GRAALVM_EE_JAVA17_22_3_2/graalvm-ee-java17-windows-amd64-22.3.2.zip
-
-- Linux AMD64 (64-bit): https://oca.opensource.oracle.com/gds/GRAALVM_EE_JAVA17_22_3_2/graalvm-ee-java17-linux-amd64-22.3.2.tar.gz
-
-- Linux AARCH64 (ARM 64-bit): https://oca.opensource.oracle.com/gds/GRAALVM_EE_JAVA17_22_3_2/graalvm-ee-java17-linux-aarch64-22.3.2.tar.gz
-
-- Mac AMD64 (64-bit): https://oca.opensource.oracle.com/gds/GRAALVM_EE_JAVA17_22_3_2/graalvm-ee-java17-darwin-amd64-22.3.2.tar.gz
-
-</details>
-
-<details>
-  <summary>Java 11</summary>
-
-- Windows AMD64 (64-bit): https://oca.opensource.oracle.com/gds/GRAALVM_EE_JAVA11_22_3_2/graalvm-ee-java11-windows-amd64-22.3.2.zip
-
-- Linux AMD64 (64-bit): https://oca.opensource.oracle.com/gds/GRAALVM_EE_JAVA11_22_3_2/graalvm-ee-java11-linux-amd64-22.3.2.tar.gz
-
-- Linux AARCH64 (ARM 64-bit): https://oca.opensource.oracle.com/gds/GRAALVM_EE_JAVA11_22_3_2/graalvm-ee-java11-linux-aarch64-22.3.2.tar.gz
-
-- Mac AMD64 (64-bit): https://oca.opensource.oracle.com/gds/GRAALVM_EE_JAVA11_22_3_2/graalvm-ee-java11-darwin-amd64-22.3.2.tar.gz
-
-</details>
-
-<details>
-  <summary>Java 8</summary>
-
-- Windows AMD64 (64-bit): https://oca.opensource.oracle.com/gds/GRAALVM_EE_JAVA8_21_3_6/graalvm-ee-java8-windows-amd64-21.3.6.zip
-
-- Linux AMD64 (64-bit): https://oca.opensource.oracle.com/gds/GRAALVM_EE_JAVA8_21_3_6/graalvm-ee-java8-linux-amd64-21.3.6.tar.gz
-
-- Mac AMD64 (64-bit): https://oca.opensource.oracle.com/gds/GRAALVM_EE_JAVA8_21_3_6/graalvm-ee-java8-darwin-amd64-21.3.6.tar.gz
-
-</details>
+> The terms Enterprise Edition (EE) and Community Edition (CE) are now deprecated from GraalVM with a rebranding from Oracle. In the past, you had to be a Oracle subscriber to use the Enterprise Edition which had the features we want or use the Community Edition, now the public version which is just GraalVM have these features for free to the public, the new versions also include ZGC which is recommended to use with GraalVM over using its G1GC collector
 
 <br>
 
-Select GraalVM EE versions are also available on the AUR and on Oracle Linux's repositories
+GraalVM is a new Java VM from Oracle that can improve the performance of (modded and vanilla) Minecraft. While client FPS gains are modest, server-side workloads like chunk generation can get a 20%+ boost.
 
-*Most up-to-date non-Enterprise Edition downloads, no account needed*
+<br>
+
+Download it from these direct links from Oracle:
+
+Select GraalVM versions are also available on the AUR and on Oracle Linux's repositories
+
+*Most up-to-date downloads, no account needed*
+
+> Note: If you are using Java >20, it does not need the `-XX:G1ConcRefinementServiceIntervalMillis=150` flag and will only print a warning with the flag
+
+> I do not currently recommend using Java >20 in modded as it can break a lot of things, however, GraalVM Java 21 uses generational ZGC and can have a large performance boost
+
+<details>
+  <summary>Java 21</summary>
+
+- Windows AMD64 (64-bit): https://download.oracle.com/graalvm/21/latest/graalvm-jdk-21_windows-x64_bin.zip
+
+- Linux AMD64 (64-bit): https://download.oracle.com/graalvm/21/latest/graalvm-jdk-21_linux-x64_bin.tar.gz
+
+- Linux AARCH64 (ARM 64-bit): https://download.oracle.com/graalvm/21/latest/graalvm-jdk-21_linux-aarch64_bin.tar.gz
+
+- Mac AMD64 (64-bit): https://download.oracle.com/graalvm/21/latest/graalvm-jdk-21_macos-x64_bin.tar.gz
+
+- Mac AARCH64 (ARM 64-bit): https://download.oracle.com/graalvm/21/latest/graalvm-jdk-21_macos-aarch64_bin.tar.gz
+
+</details>
+
 <details>
   <summary>Java 20</summary>
 
@@ -400,50 +384,93 @@ Select GraalVM EE versions are also available on the AUR and on Oracle Linux's r
 
 - Mac AARCH64 (ARM 64-bit): https://download.oracle.com/graalvm/17/latest/graalvm-jdk-17_macos-aarch64_bin.tar.gz
 
-
 </details>
 
 <br>
 
-These releases are not Java installers. You need to manually replace your launcher's version of Java, or use a Minecraft launcher that supports specifying your Java path. I recommend ATLauncher, Prism Launcher or GDLauncher. When specifying a java path, navigate to the "bin" folder in the GraalVM download and use `javaw.exe` or `java.exe` (`javaw.exe` is typically the most recommended as it will not have an additional console window/command promot while `java.exe` will).
+Unfortunately, I am no longer able to supply public free to download Java 11 and 8 links, however, you can look for current and archived versions of GraalVM on the current listing of [Oracle's website](https://www.oracle.com/downloads/graalvm-downloads.html) and on their [Java download page](https://www.oracle.com/java/technologies/downloads/#graalvmjava20).
+
+If you do have an Oracle account, you can use these links:
+
+*Most up-to-date Enterprise Edition downloads, account needed, these do not have ZGC*
+
+<details>
+  <summary>Java 11</summary>
+
+- Windows AMD64 (64-bit): https://download.oracle.com/otn/utilities_drivers/oracle-labs/graalvm-ee-java11-windows-amd64-22.3.3.zip
+
+- Linux AMD64 (64-bit): https://download.oracle.com/otn/utilities_drivers/oracle-labs/graalvm-ee-java11-linux-amd64-22.3.3.tar.gz
+
+- Linux AARCH64 (ARM 64-bit): https://download.oracle.com/otn/utilities_drivers/oracle-labs/graalvm-ee-java11-linux-aarch64-22.3.3.tar.gz
+
+- Mac AMD64 (64-bit): https://download.oracle.com/otn/utilities_drivers/oracle-labs/graalvm-ee-java11-darwin-amd64-22.3.3.tar.gz
+
+</details>
+
+<details>
+  <summary>Java 8</summary>
+
+- Windows AMD64 (64-bit): https://download.oracle.com/otn/utilities_drivers/oracle-labs/graalvm-ee-java8-windows-amd64-21.3.7.zip
+
+- Linux AMD64 (64-bit): https://download.oracle.com/otn/utilities_drivers/oracle-labs/graalvm-ee-java8-linux-amd64-21.3.7.tar.gz
+
+- Mac AMD64 (64-bit): https://download.oracle.com/otn/utilities_drivers/oracle-labs/graalvm-ee-java8-darwin-amd64-21.3.7.tar.gz
+
+</details>
+
+
+<br>
+
+These releases are not Java installers. You need to manually replace your launcher's version of Java, or use a Minecraft launcher that supports specifying your Java path. I recommend ATLauncher, Prism Launcher or GDLauncher. When specifying a java path, navigate to the "bin" folder in the GraalVM download and use `javaw.exe` or `java.exe` (`javaw.exe` is typically the most recommended as it will not have an additional console window/command prompt while `java.exe` will).
 
 Alternatively, you can install it system-wide by following [Oracle's guide](https://www.graalvm.org/latest/docs/getting-started/)
 
-You can also look for current and archived versions of GraalVM (EE) on [Oracle's website](https://www.oracle.com/downloads/graalvm-downloads.html)
+<br>
+
+For servers, you need to replace the "java" command in your server start sh/bat file with the full path to Graalvm java, in quotes.
 
 <br>
 
-For servers, you need to replace the "java" command in your server start sh/bat file with the full path to Graalvm (EE) java, in quotes.
-
-<br>
-
-## GraalVM (EE) Java Arguments
+## GraalVM Java Arguments
 
 Be sure to set `-Dgraal.VectorizeSIMD` to `false` if you run shaders.
-Arguments for GraalVM (EE) 11, 17, & 20:
+Arguments for GraalVM 11, 17, & 20:
 
 ```-XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions -XX:+AlwaysActAsServerClassMachine -XX:+AlwaysPreTouch -XX:+DisableExplicitGC -XX:+UseNUMA -XX:AllocatePrefetchStyle=3 -XX:NmethodSweepActivity=1 -XX:ReservedCodeCacheSize=400M -XX:NonNMethodCodeHeapSize=12M -XX:ProfiledCodeHeapSize=194M -XX:NonProfiledCodeHeapSize=194M -XX:-DontCompileHugeMethods -XX:+PerfDisableSharedMem -XX:+UseFastUnorderedTimeStamps -XX:+UseCriticalJavaThreadPriority -XX:+EagerJVMCI -Dgraal.TuneInlinerExploration=1 -Dgraal.CompilerConfiguration=enterprise```
 
 **You must use G1GC or ZGC with these arguments.** GraalVM currently doesn't work with Shenandoah's garbage collector.
 
+<br>
+
 <details>
-    <summary>If we were to use Java >8 with GraalVM (EE's) Java Arguments and G1GC, it would look like this (Client)</summary>
+    <summary>If we were to use Java >21 with GraalVM Java Arguments and Generational ZGC, it would look like this</summary>
+
+```-Xmx8G -Xms8G -XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions -XX:+AlwaysActAsServerClassMachine -XX:+AlwaysPreTouch -XX:+DisableExplicitGC -XX:+UseNUMA -XX:NmethodSweepActivity=1 -XX:ReservedCodeCacheSize=400M -XX:NonNMethodCodeHeapSize=12M -XX:ProfiledCodeHeapSize=194M -XX:NonProfiledCodeHeapSize=194M -XX:-DontCompileHugeMethods -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -XX:+UseVectorCmov -XX:+PerfDisableSharedMem -XX:+UseFastUnorderedTimeStamps -XX:+UseCriticalJavaThreadPriority -XX:ThreadPriorityPolicy=1 -XX:AllocatePrefetchStyle=3 -XX:+UseZGC -XX:AllocatePrefetchStyle=1 -XX:-ZProactive -XX:+UseZGC -XX:AllocatePrefetchStyle=1 -XX:-ZUncommit -XX:+ZGenerational```
+
+</details>
+
+<br>
+
+<details>
+    <summary>If we were to use Java >8 with GraalVM Java Arguments and ZGC, it would look like this</summary>
+
+```-Xmx8G -Xms8G -XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions -XX:+AlwaysActAsServerClassMachine -XX:+AlwaysPreTouch -XX:+DisableExplicitGC -XX:+UseNUMA -XX:NmethodSweepActivity=1 -XX:ReservedCodeCacheSize=400M -XX:NonNMethodCodeHeapSize=12M -XX:ProfiledCodeHeapSize=194M -XX:NonProfiledCodeHeapSize=194M -XX:-DontCompileHugeMethods -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -XX:+UseVectorCmov -XX:+PerfDisableSharedMem -XX:+UseFastUnorderedTimeStamps -XX:+UseCriticalJavaThreadPriority -XX:ThreadPriorityPolicy=1 -XX:AllocatePrefetchStyle=3 -XX:+UseZGC -XX:AllocatePrefetchStyle=1 -XX:-ZProactive -XX:+UseZGC -XX:AllocatePrefetchStyle=1 -XX:-ZProactive```
+
+</details>
+
+<br>
+
+<details>
+    <summary>If we were to use Java >8 with GraalVM Java Arguments and G1GC, it would look like this (Client)</summary>
 
 ```-Xmx8G -Xms8G -XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions -XX:+AlwaysActAsServerClassMachine -XX:+AlwaysPreTouch -XX:+DisableExplicitGC -XX:+UseNUMA -XX:NmethodSweepActivity=1 -XX:ReservedCodeCacheSize=400M -XX:NonNMethodCodeHeapSize=12M -XX:ProfiledCodeHeapSize=194M -XX:NonProfiledCodeHeapSize=194M -XX:-DontCompileHugeMethods -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -XX:+UseVectorCmov -XX:+PerfDisableSharedMem -XX:+UseFastUnorderedTimeStamps -XX:+UseCriticalJavaThreadPriority -XX:ThreadPriorityPolicy=1 -XX:AllocatePrefetchStyle=3 -XX:+UseG1GC -XX:MaxGCPauseMillis=37 -XX:+PerfDisableSharedMem -XX:G1HeapRegionSize=16M -XX:G1NewSizePercent=23 -XX:G1ReservePercent=20 -XX:SurvivorRatio=32 -XX:G1MixedGCCountTarget=3 -XX:G1HeapWastePercent=20 -XX:InitiatingHeapOccupancyPercent=10 -XX:G1RSetUpdatingPauseTimePercent=0 -XX:MaxTenuringThreshold=1 -XX:G1SATBBufferEnqueueingThresholdPercent=30 -XX:G1ConcMarkStepDurationMillis=5.0 -XX:G1ConcRSHotCardLimit=16 -XX:G1ConcRefinementServiceIntervalMillis=150 -XX:GCTimeRatio=99 -XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions -XX:+AlwaysActAsServerClassMachine -XX:+AlwaysPreTouch -XX:+DisableExplicitGC -XX:+UseNUMA -XX:AllocatePrefetchStyle=3 -XX:NmethodSweepActivity=1 -XX:ReservedCodeCacheSize=400M -XX:NonNMethodCodeHeapSize=12M -XX:ProfiledCodeHeapSize=194M -XX:NonProfiledCodeHeapSize=194M -XX:-DontCompileHugeMethods -XX:+PerfDisableSharedMem -XX:+UseFastUnorderedTimeStamps -XX:+UseCriticalJavaThreadPriority -XX:+EagerJVMCI -Dgraal.TuneInlinerExploration=1 -Dgraal.CompilerConfiguration=enterprise```
 
 </details>
 
 <details>
-    <summary>If we were to use Java >8 with GraalVM (EE's) Java Arguments and G1GC, it would look like this (Server)</summary>
+    <summary>If we were to use Java >8 with GraalVM Java Arguments and G1GC, it would look like this (Server)</summary>
 
 ```-Xmx8G -Xms8G -XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions -XX:+AlwaysActAsServerClassMachine -XX:+AlwaysPreTouch -XX:+DisableExplicitGC -XX:+UseNUMA -XX:NmethodSweepActivity=1 -XX:ReservedCodeCacheSize=400M -XX:NonNMethodCodeHeapSize=12M -XX:ProfiledCodeHeapSize=194M -XX:NonProfiledCodeHeapSize=194M -XX:-DontCompileHugeMethods -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -XX:+UseVectorCmov -XX:+PerfDisableSharedMem -XX:+UseFastUnorderedTimeStamps -XX:+UseCriticalJavaThreadPriority -XX:ThreadPriorityPolicy=1 -XX:AllocatePrefetchStyle=3 -XX:+UseG1GC -XX:MaxGCPauseMillis=130 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=28 -XX:G1HeapRegionSize=16M -XX:G1ReservePercent=20 -XX:G1MixedGCCountTarget=3 -XX:InitiatingHeapOccupancyPercent=10 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=0 -XX:SurvivorRatio=32 -XX:MaxTenuringThreshold=1 -XX:G1SATBBufferEnqueueingThresholdPercent=30 -XX:G1ConcMarkStepDurationMillis=5 -XX:G1ConcRSHotCardLimit=16 -XX:G1ConcRefinementServiceIntervalMillis=150 -XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions -XX:+AlwaysActAsServerClassMachine -XX:+AlwaysPreTouch -XX:+DisableExplicitGC -XX:+UseNUMA -XX:AllocatePrefetchStyle=3 -XX:NmethodSweepActivity=1 -XX:ReservedCodeCacheSize=400M -XX:NonNMethodCodeHeapSize=12M -XX:ProfiledCodeHeapSize=194M -XX:NonProfiledCodeHeapSize=194M -XX:-DontCompileHugeMethods -XX:+PerfDisableSharedMem -XX:+UseFastUnorderedTimeStamps -XX:+UseCriticalJavaThreadPriority -XX:+EagerJVMCI -Dgraal.TuneInlinerExploration=1 -Dgraal.CompilerConfiguration=enterprise```
-
-</details>
-
-<details>
-    <summary>If we were to use Java >8 with GraalVM (EE's) Java Arguments and ZGC, it would look like this</summary>
-
-```-Xmx8G -Xms8G -XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions -XX:+AlwaysActAsServerClassMachine -XX:+AlwaysPreTouch -XX:+DisableExplicitGC -XX:+UseNUMA -XX:NmethodSweepActivity=1 -XX:ReservedCodeCacheSize=400M -XX:NonNMethodCodeHeapSize=12M -XX:ProfiledCodeHeapSize=194M -XX:NonProfiledCodeHeapSize=194M -XX:-DontCompileHugeMethods -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -XX:+UseVectorCmov -XX:+PerfDisableSharedMem -XX:+UseFastUnorderedTimeStamps -XX:+UseCriticalJavaThreadPriority -XX:ThreadPriorityPolicy=1 -XX:AllocatePrefetchStyle=3 -XX:+UseZGC -XX:AllocatePrefetchStyle=1 -XX:-ZProactive -XX:+UseZGC -XX:AllocatePrefetchStyle=1 -XX:-ZProactive```
 
 </details>
 
@@ -459,9 +486,9 @@ It is also possible to get Java 8 versions of GraalVM (EE) from the [21.X sectio
 
 <br>
 
-## GraalVM (EE) Mod Compatibility
+## GraalVM Mod Compatibility
 
-**GraalVM (EE) 22.3.0 fixes all known Minecraft compatibility bugs**
+> GraalVM 22.3.0 fixes all known Minecraft compatibility bugs
 
 If you run an older, Java 8-based version of GraalVM, there are some potential issues:
 
@@ -499,7 +526,7 @@ NUMA
 
 The flag `-XX:+UseNUMA` forces the enabling of NUMA.
 
-`-XX:+UseNUMA` can be safely removed from AMD Ryzen MCM and Threadripper CPUs. The NUMA flag ensures that CPUs are able to access RAM uniformly, however, with AMD Ryzen MCM and Threadripper CPUs the cores already perform memory access uniformly. Typically, this flag may not even be needed as the Java Virtual Machine should now automatically detect if NUMA is actually needed.
+`-XX:+UseNUMA` can be safely removed from AMD Ryzen MCM and Threadripper CPUs. The NUMA flag ensures that CPUs are able to access RAM uniformly, however, with AMD Ryzen MCM and Threadripper CPUs the cores already perform memory access uniformly. Typically, this flag may not even be needed as the Java Virtual Machine should now automatically detect if NUMA is actually needed. AMD Ryzen MCM and Threadripper CPUs should automatically disable this flag, however, you may want to manually remove it.
 
 There may be slight increases or decreases in performance based upon the usage of this flag, however, with modern CPUs there should not be too much of a difference, as well as based upon RAM.
 
@@ -510,7 +537,7 @@ Other Performance Tips
 
 - Run your Minecraft servers on the Clear Linux OS - It's by far the most optimized linux distribution out-of-the-box, and it has some other nice features (like a stateless config system). It also runs clients on AMD/Intel GPUs [quite well](https://web.archive.org/web/20220916090057/https://docs.01.org/clearlinux/latest/tutorials/multi-boot/dual-boot-win.html).
 
-- [Oracle Linux](https://www.oracle.com/linux/) is also a good choice for servers, since its reasonably well optimized out-of-the-box and has Graalvm (EE) available via the package manager.
+- [Oracle Linux](https://www.oracle.com/linux/) is also a good choice for servers, since its reasonably well optimized out-of-the-box and has Graalvm available via the package manager.
 
 - For Linux clients, Arch-based distros like CachyOS or EndeavorOS are excellent, as they have wide support for most hardware.
 
