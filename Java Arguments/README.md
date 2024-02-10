@@ -210,6 +210,17 @@ See more tuning options [here](https://wiki.openjdk.org/display/shenandoah/Main)
 > Note: Shenandoah is not in Java 8. It's also not currently in any Oracle Java builds. If you are a Java 8 user, you must use Red Hat OpenJDK to use [Shenandoah](https://developers.redhat.com/products/openjdk/download)
 
 <details>
+  <summary>Download sources</summary>
+
+- Adoptium Temurin: https://adoptium.net/temurin/releases/?version=17&os=any
+
+- Oracle OpenJDK: https://wiki.openjdk.org/display/shenandoah/Main
+
+</details>
+
+<br>
+
+<details>
     <summary>If we were to use Java >8 with only Shenandoah it would look like this</summary>
 
 ```-Xmx8G -Xms8G -XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions -XX:+AlwaysActAsServerClassMachine -XX:+AlwaysPreTouch -XX:+DisableExplicitGC -XX:+UseNUMA -XX:NmethodSweepActivity=1 -XX:ReservedCodeCacheSize=400M -XX:NonNMethodCodeHeapSize=12M -XX:ProfiledCodeHeapSize=194M -XX:NonProfiledCodeHeapSize=194M -XX:-DontCompileHugeMethods -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -XX:+UseVectorCmov -XX:+PerfDisableSharedMem -XX:+UseFastUnorderedTimeStamps -XX:+UseCriticalJavaThreadPriority -XX:ThreadPriorityPolicy=1 -XX:AllocatePrefetchStyle=3 -XX:+UseShenandoahGC -XX:ShenandoahGCMode=iu -XX:ShenandoahGuaranteedGCInterval=1000000 -XX:AllocatePrefetchStyle=1```
