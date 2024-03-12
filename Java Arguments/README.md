@@ -75,7 +75,7 @@ Minecraft Version and Java Version
 | >= 1.19.2 | 17, 19, 21. Depending on the modpack it may be beneficial to use Java 17 over Java 19 or 21. Java 21 has significant improvements over 20 is why 20 is not recommended and should be able to be dropped in place in any instance Java 20 can be used. |
 | > 1.16.5 | 17 |
 | = 1.16.5 | It is recommended to use Java 17 for Minecraft 1.16.5, however, in certain cases this may break some things, if you notice it is unplayable I recommend switching to Java 8. Although, some people may recommend going with Java 11/15/16 which should work with 1.16.5 it should have a better performance boost defaulting to Java 8. |
-| < 1.16.5 | 8 |
+| < 1.16.5 | 8. In some instances you may be able to use Java 17 such as GTNH. |
 | < 1.7.10 | You may need to use Java 7, for example 1.6.4 |
 
 > Depending on your launcher you may be asked to use a different Java version. Curseforge and Prism will ask you to use Java 8 when you are on Minecraft 1.16.X, however, most 1.16.5 mods are compatible with Java 17.
