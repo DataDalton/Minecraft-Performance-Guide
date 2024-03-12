@@ -72,6 +72,7 @@ Minecraft Version and Java Version
 
 | **Minecraft Version** | **Java Version** |
 |---|---|
+| >= 1.19.2 | 17, 19, 21. Depending on the modpack it may be beneficial to use Java 17 over Java 19 or 21. Java 21 has significant improvements over 20 is why 20 is not recommended and should be able to be dropped in place in any instance Java 20 can be used. |
 | > 1.16.5 | 17 |
 | = 1.16.5 | It is recommended to use Java 17 for Minecraft 1.16.5, however, in certain cases this may break some things, if you notice it is unplayable I recommend switching to Java 8. Although, some people may recommend going with Java 11/15/16 which should work with 1.16.5 it should have a better performance boost defaulting to Java 8. |
 | < 1.16.5 | 8 |
