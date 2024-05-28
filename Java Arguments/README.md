@@ -536,6 +536,7 @@ This is a **fantastic** repo for finding performance mods: https://github.com/No
 There is no longer any use for Optifine, even in 1.7.10.
 
 For Forge/NeoForge use: [Embeddium](https://www.curseforge.com/minecraft/mc-mods/embeddium) + [Oculus](https://www.curseforge.com/minecraft/mc-mods/oculus) (shaders)
+
 For Fabric use: [Sodium](https://www.curseforge.com/minecraft/mc-mods/sodium) + [Iris](https://www.curseforge.com/minecraft/mc-mods/irisshaders) (shaders)
 
 <br>
