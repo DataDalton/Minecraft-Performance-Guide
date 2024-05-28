@@ -116,7 +116,13 @@ Launchers
 ======
 It is important to note that the launcher you use may influence the behavior of how you input your java arguments/flags.
 
+> It is recommended to not use Curseforge's Modded Minecraft launcher, if you choose to do so, know you need to set your Java `/bin/javaw.exe` path at every startup of Minecraft, not Curseforge. The option for changing the Java version in Curseforge is for installing the Forge modloader and not the actual Java version Minecraft will run with.
+
 [Prism Launcher](https://prismlauncher.org/wiki/help-pages/java-settings/)
+
+[Modrinth Launcher](https://modrinth.com/app)
+
+> I do not currently recommend Modrinth's launcher, however, I have included it anyways (they do not have a direct link on how to input your java arguments/flags)
 
 [ATLauncher](https://atlauncher.com/help/extra-arguments)
 
@@ -352,7 +358,7 @@ Select GraalVM versions are also available on the AUR and on Oracle Linux's repo
 
 > Note: If you are using Java >20, it does not need the `-XX:G1ConcRefinementServiceIntervalMillis=150` flag and will only print a warning with the flag
 
-> I do not currently recommend using Java >20 in modded as it can break a lot of things, however, GraalVM Java 21 uses generational ZGC and can have a large performance boost
+> I highly recommend using GraalVM Java 21 with generational ZGC where possible as of 1.20.5. In older versions if the modpack is not explicitly compatible with Java 21 then fallback to previous recommendations. GraalVM Java 21 uses generational ZGC and does have a large performance boost. GraalVM Java 21 with generational ZGC in-use is the current best recommendation as of 1.20.5 for both server and client.
 
 <details>
   <summary>Java 21</summary>
@@ -630,8 +636,11 @@ A modernized overhaul of benchmarking is in-progress
 Too Long Didn't Read (TLDR)/Summary
 ======
 
-Minecraft Version >= 1.16.5 = Java 17
+Minecraft Version >= 1.20.5 = Java 21
+Minecraft Version <= 1.20.4 and >= 1.16.5 = Java 17
 Minecraft Version < 1.16.5 = Java 8
+
+Exceptions for Minecraft versions can be made, for example in the modpack GTNH you want to use Java 21
 
 If you do not know what Java version you are using, you are likely using a version of Java which only has the G1GC, in this case copy and paste the following into your JVM arguments for your client:
 
