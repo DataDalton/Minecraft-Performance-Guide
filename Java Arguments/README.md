@@ -521,7 +521,7 @@ Performance Mods
 
 This is a **fantastic** repo for finding performance mods: https://github.com/NordicGamerFE/usefulmods
 
-Instead of Optifine, I would recommend more compatible alternatives like Sodium + Iris or Rubidium + Oculus.
+Instead of Optifine, I would recommend more compatible alternatives like Sodium + Iris or Embeddium + Oculus.
 
 <br>
 
