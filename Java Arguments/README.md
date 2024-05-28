@@ -26,6 +26,12 @@ It is also possible as a result of the usage of these arguments to increase Rand
 
 <br>
 
+Second Disclaimer:
+
+This guide mentions NeoForge, NeoForge is intended to fully replace Forge. The full development team of Forge, minus 1 person forked Forge and created NeoForge. For future developmental purposes, NeoForge will be the new modloader.
+
+<br>
+
 Mod lag
 ======
 
@@ -63,7 +69,7 @@ or
 
 <br>
 
-***Note: All mods above have Forge/Fabric versions***
+***Note: All mods above have Forge/Fabric versions, most have versions for NeoForge now***
 
 <br>
 
@@ -116,7 +122,7 @@ Launchers
 ======
 It is important to note that the launcher you use may influence the behavior of how you input your java arguments/flags.
 
-> It is recommended to not use Curseforge's Modded Minecraft launcher, if you choose to do so, know you need to set your Java `/bin/javaw.exe` path at every startup of Minecraft, not Curseforge. The option for changing the Java version in Curseforge is for installing the Forge modloader and not the actual Java version Minecraft will run with.
+> It is recommended to not use Curseforge's Modded Minecraft launcher, if you choose to do so, know you need to set your Java `/bin/javaw.exe` path at every startup of Minecraft, not Curseforge. The option for changing the Java version in Curseforge is for installing the Forge modloader and not the actual Java version Minecraft will run with (yes, Curseforge made it sound confusing).
 
 [Prism Launcher](https://prismlauncher.org/wiki/help-pages/java-settings/)
 
@@ -574,9 +580,7 @@ Other Performance Tips
 Frequently Asked Questions
 ======
 
-- Java versions above 17 have some mod incompatibilities so I cannot at the time recommend using them. However, they now reportedly work with most modpacks, but I'm not sure if there are any performance benefits.
-
-- Java tweaks improve server performance and client stuttering, but they don't boost average client FPS much (if at all). For that, running correct/up-to-date graphics drivers and performance mods is far more [important](https://github.com/NordicGamerFE/usefulmods)
+- Java arguments have the goal of improving server performance and client stuttering as a result of garbage collection, they do not have the intention of boosting client FPS. For that, running correct/up-to-date graphics drivers and performance mods is far more [important](https://github.com/NordicGamerFE/usefulmods)
 
 - This guide assumes you have a decent amount of spare RAM when running Minecraft. If your setup is RAM constrained, try removing the following arguments in particular: `-XX:NmethodSweepActivity=1 -XX:ReservedCodeCacheSize=400M -XX:NonNMethodCodeHeapSize=12M -XX:ProfiledCodeHeapSize=194M -XX:NonProfiledCodeHeapSize=194M`, and try the server G1GC arguments.
 
@@ -588,7 +592,7 @@ Frequently Asked Questions
   - Try restarting your computer and only running Minecraft and see if it works
   - Reinstall your Java Runtime Environment
   - Try reinstalling Minecraft
-  - (Weird-edge case) If you are using only vanilla try installing Forge with or without mods and test
+  - (Weird-edge case) If you are using only vanilla try installing Forge/NeoForge with or without mods and test
 
 <br>
 
@@ -645,7 +649,7 @@ Exceptions for Minecraft versions can be made, for example in the modpack GTNH y
 If you do not know what Java version you are using, you are likely using a version of Java which only has the G1GC, in this case copy and paste the following into your JVM arguments for your client:
 
 <details>
-    <summary>Java 17</summary>
+    <summary> >=Java 17</summary>
 
 ```-Xmx8G -Xms8G -XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions -XX:+AlwaysActAsServerClassMachine -XX:+AlwaysPreTouch -XX:+DisableExplicitGC -XX:+UseNUMA -XX:NmethodSweepActivity=1 -XX:ReservedCodeCacheSize=400M -XX:NonNMethodCodeHeapSize=12M -XX:ProfiledCodeHeapSize=194M -XX:NonProfiledCodeHeapSize=194M -XX:-DontCompileHugeMethods -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -XX:+UseVectorCmov -XX:+PerfDisableSharedMem -XX:+UseFastUnorderedTimeStamps -XX:+UseCriticalJavaThreadPriority -XX:ThreadPriorityPolicy=1 -XX:AllocatePrefetchStyle=3 -XX:+UseG1GC -XX:MaxGCPauseMillis=37 -XX:+PerfDisableSharedMem -XX:G1HeapRegionSize=16M -XX:G1NewSizePercent=23 -XX:G1ReservePercent=20 -XX:SurvivorRatio=32 -XX:G1MixedGCCountTarget=3 -XX:G1HeapWastePercent=20 -XX:InitiatingHeapOccupancyPercent=10 -XX:G1RSetUpdatingPauseTimePercent=0 -XX:MaxTenuringThreshold=1 -XX:G1SATBBufferEnqueueingThresholdPercent=30 -XX:G1ConcMarkStepDurationMillis=5.0 -XX:G1ConcRSHotCardLimit=16 -XX:G1ConcRefinementServiceIntervalMillis=150 -XX:GCTimeRatio=99```
 
@@ -658,9 +662,7 @@ If you do not know what Java version you are using, you are likely using a versi
 
 </details>
 
-
-
-If you do know you are using a version of Java with ZGC, Shenandoah, or GraalVM support then you should check [ZGC](#zgc), [Shenandoah](#Shenandoah), or [GraalVM](#graalvm-enterprise-edition)
+If you do know if you are using a version of Java with ZGC, Shenandoah, or GraalVM support then you should check [ZGC](#zgc), [Shenandoah](#Shenandoah), or [GraalVM](#graalvm-enterprise-edition), chances are, however, you are likely not if you previously didn't know about it.
 
 
 > Note: See [Launchers](#launchers) and [Memory Allocation](#memory-allocation) for important information
